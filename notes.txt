@@ -1,0 +1,17 @@
+
+
+# copy files from mgmt server
+
+scp 'admin@mgmtserver:${FWDIR}/conf/objects_5_0.C'
+scp 'admin@mgmtserver:${FWDIR}/conf/rulebases_5_0.fws'
+
+# list of rulebase names
+
+grep :rule-base rulebases_5_0.fws
+
+# copy rulebase (this is already contained in rulebases_5_0.fws ?)
+
+scp 'admin@mgmtserver:${FWDIR}/conf/<rulebase-name>.W'
+
+
+
